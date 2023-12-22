@@ -1,0 +1,36 @@
+import random
+def greet(x):
+    def mx():
+        print("hello ji namaste")
+        x()
+        print("thats it ji")
+    return mx
+@greet
+def game():
+    ip1=input("enter ur choice , ROCK,PAPER,SCIZER\n(R,P,S)?").upper()
+    l=["R","P","S"]
+    ip2=random.choice(l)
+    if ip1==ip2:
+        print("its a draw")
+    elif ip1=="R":
+        if ip2=="P":
+            print("its a loose")
+        else:
+            print("its a win")
+    elif ip1=="P":
+        if ip2=="S":
+            print("its a loose")
+        else:
+            print("its a win")
+    elif ip1=="S":
+        if ip2=="R":
+            print("its a loose")
+        else:
+            print("its a win")
+    else:print("thik se input dena yaar")
+k=1
+try:
+    while(k==1):
+        game()
+        k=int(input("wanna play again,ENTER input in (1/0)"))
+finally:print("game khatam")
