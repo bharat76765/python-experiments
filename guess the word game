@@ -1,0 +1,26 @@
+import random
+words=["binary","bit","cache","code","cpu","data","debug","disk","file","gpu","icon","input","java","json"]
+secretword=random.choice(words)
+guess=[]
+attemptsleft=6
+target=0
+while target != 1:
+    a=input(f"\n allowed_attempts={attemptsleft} \n enter the letter ")
+    guess.append(a.lower())
+    for letter in secretword:
+        if letter.lower() in guess:
+            print(letter,end=" ")
+        else:
+            print("_",end=" ")
+    if a.lower() not in secretword:
+            attemptsleft=attemptsleft-1 
+            if attemptsleft==0:
+                 print(f"\n you lost it , the secretword was {secretword}")
+                 break
+    for letter in secretword :
+      if letter in guess:
+        target=1
+      else:
+        break
+if target==1:
+  print(f"\n you won , the secretword was {secretword}")
