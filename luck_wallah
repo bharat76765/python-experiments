@@ -1,0 +1,88 @@
+import random
+d=input("your name dear?")
+def luckwala(): 
+    lis=[1,2,3,4,5,6]
+    count=0
+    c=[]
+    p=0
+    l="LUCKIE"
+    print("lets roll.............")
+    while(count<6):
+        count=count+1
+        k=random.choice(lis)
+        z=0
+        while(z<10):
+            z=z+1
+            print(l[p:p+1],end="")
+        if(count%2==1):
+            print("\nlets roll two dices , press enter")
+            input()
+        print("\n",k)
+        p=p+1
+        c.append(k)
+    j=sum(c)
+    if(25<j):
+        print("luck_score=",j)
+        print("VERY LUCKY")
+    elif(15<j<25):
+        print("luck_score=",j)
+        print("BALANCED LUCK IN YOUR BASKET")
+    else:
+        print("luck_score=",j)
+        print("don believe luck,GO and WORK")
+    print("\nbest of luck dear",d,"\n\n")
+def guess_me():
+    trial=0
+    a=int(input("enter the range in which u wish to play the game\nstart_no=?")
+b=int(input("\nend_number=?"))
+    l=[]
+    if a==b:
+      print("are you kidding??,rerun the game to play again")
+          exit()
+      if a<b:
+          for g in range(a,b+1):
+              l.append(g)
+          value=random.choice(l)
+          n=int(input("enter the guess"))
+          while n!=value:
+              if n<a:
+                  print("start number=",a,"\nniklo yaha se!!!!" )
+                  break
+              elif n>b:
+                  print("end number=",b,"\nniklo yaha se!!!!" )
+                  break
+              elif n<value:
+                  print("may be the choosen number is GREATER than the guessed number")
+                  trial=trial+1
+                  n=int(input("enter the guess"))
+              elif n>value:
+                  print("may be the choosen number is LESSER than the guessed number")
+                  trial=trial+1
+                  n=int(input("enter the guess"))
+              else:
+                  print("don be oversmart kiddo")
+          if n==value:
+                  print("thats a guess , an absolute one")
+          if trial<5:
+              print("thats stunning",d,"you took",trial,"number of trials")
+          elif 4<trial<10:
+              print("that took a while",d,"you took",trial,"number of trials")
+          else:
+              print("it was wayyyyy toooo longgggg for you",d,“
+               you took",trial,"number of trials")
+          print("best of luck",d,"\n\n")
+       else:
+              print("a=min_number,b=max_number")
+      print("so, which game you choose to play\n1) CHECK_LUCK_BY_DICE \n2) GUESS THE NUMBER\n3) EXIT")
+      h=int(input(f"enter your choice {d}"))
+      while h:   
+          match h:
+              case 1:
+                  luckwala()
+
+              case 2:
+                  guess_me()
+              case 3:
+                  exit()
+              case _ :
+                  print("please get out oversmart")
