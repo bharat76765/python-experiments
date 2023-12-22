@@ -1,0 +1,151 @@
+#tic tac toe game
+one = "1"
+two = "2"
+three = "3"
+four = "4"
+five = "5"
+six = "6"
+seven = "7"
+eight = "8"
+nine = "9"
+count = 0
+p = 2
+turn = 1
+
+
+def tic():
+  global turn
+  global count
+  global one
+  global two
+  global three
+  global four
+  global five
+  global six
+  global seven
+  global eight
+  global nine
+  if n == 1 and int(one) == 1:
+    if turn == 1:
+      one = "X"
+      count = count + 1
+    else:
+      one = "O"
+      count = count + 1
+  elif (n == 2 and int(two) == 2):
+    if turn == 1:
+      two = "X"
+      count = count + 1
+    else:
+      two = "O"
+      count = count + 1
+
+  elif n == 3 and int(three) == 3:
+    if turn == 1:
+      three = "X"
+      count = count + 1
+    else:
+      three = "O"
+      count = count + 1
+
+  elif n == 4 and int(four) == 4:
+    if turn == 1:
+      four = "X"
+      count = count + 1
+    else:
+      four = "O"
+      count = count + 1
+
+  elif n == 5 and int(five) == 5:
+    if turn == 1:
+      five = "X"
+      count = count + 1
+    else:
+      five = "O"
+      count = count + 1
+
+  elif n == 6 and int(six) == 6:
+    if turn == 1:
+      six = "X"
+      count = count + 1
+    else:
+      six = "O"
+      count = count + 1
+
+  elif n == 7 and int(seven) == 7:
+    if turn == 1:
+      seven = "X"
+      count = count + 1
+    else:
+      seven = "O"
+      count = count + 1
+
+  elif n == 8 and int(eight) == 8:
+    if turn == 1:
+      eight = "X"
+      count = count + 1
+    else:
+      eight = "O"
+      count = count + 1
+
+  elif n == 9 and int(nine) == 9:
+    if turn == 1:
+      nine = "X"
+      count = count + 1
+    else:
+      nine = "O"
+      count = count + 1
+  else:
+    print("invalid move")
+    print("retry")
+
+  print(f"{one} | {two} | {three}")
+  print("..........")
+  print(f"{four} | {five} | {six}")
+  print("..........")
+  print(f"{seven} | {eight} | {nine}")
+
+
+def win():
+  global p
+  global turn
+  if count % 2 == 0:
+    tur = "user 1"
+    turn = 1
+  else:
+    tur = "user 2"
+    turn = 0
+  print(f"its {tur} turn now")
+  if count >= 5:
+    if (one == two == three or four == five == six or seven == eight == nine
+        or one == four == seven or two == five == eight or three == six == nine
+        or one == five == nine or three == five == seven):
+      if (tur == "user1"):
+        tur = "user2"
+      else:
+        tur = "user1"
+      print(f"{tur} you won!")
+      p = 0
+  elif count == 9:
+    print("its a tie")
+    p = 0
+  else:
+    pass
+
+
+def main():
+  while p != 0:
+    try:
+      tic()
+      win()
+    except:
+      win()
+      print(f"{one} | {two} | {three}")
+      print("..........")
+      print(f"{four} | {five} | {six}")
+      print("..........")
+      print(f"{seven} | {eight} | {nine}")
+    n = int(input("enter your choice"))
+    if (n < 0 or n > 9):
+      print("ye sab chodona yaar!!!,theek se khelo")
+  print("game ends here,thanks for your interest")
