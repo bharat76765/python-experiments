@@ -1,0 +1,43 @@
+import random
+n=input("enter your name buddy")
+print("hey",n,"lets start the IQ game")
+q=["What is the term for a small, rocky object that orbits the Sun and is often referred to as a 'minor planet'?","Which NASA rover successfully landed on Mars in 2021 to search for signs of past microbial life and collect samples of Martian rock and regolith?","Who was the first human to travel into space?","What is the name of the theory that suggests the universe originated from a hot, dense state approximately 13.8 billion years ago?"]
+q.append("What is the name of the largest moon of Saturn, known for its unique features such as a thick atmosphere and lakes of liquid hydrocarbons?")
+q.append("Who was the eldest of the Pandava brothers in the Mahabharata?")
+q.append("Which character in the Mahabharata is known for his archery skills and is often referred to as the greatest archer of all time?")
+q.append("What is the name of the epic battle that is the central event of the Mahabharata?")
+q.append("Who served as the charioteer for Arjuna in the Kurukshetra War?")
+q.append("Which important scripture, part of the Mahabharata, consists of a conversation between Prince Arjuna and Lord Krishna on the battlefield?")
+o=["a) Comet","b) Asteroid","c) Meteoroid","d) Satellite","a) Opportunity","b) Curiosity","c) Perseverance","d) Spirit","a) Yuri Gagarin","b) Alan Shepard","c) John Glenn","d) Neil Armstrong","a) Theory of Evolution","b) Quantum Mechanics","c) Big Bang Theory","d) String Theory","a) Titan","b) Europa","c) Ganymede","d) Callisto","a) Bhima","b) Arjuna","c) Yudhishthira","d) Nakula","a) Karna","b) Bhishma","c) Drona","d) Arjuna","a) Battle of Plassey","b) Battle of Panipat","c) Battle of Kurukshetra","d) Battle of Haldighati","a) Krishna","b) Bhishma","c) Drona","d) Karna","a) Ramayana","b) Bhagavad Gita","c) Upanishads","d) Vedas"]
+a=["b) Asteroid","c) Perseverance","a) Yuri Gagarin","c) Big Bang Theory","a) Titan","c) Yudhishthira","d) Arjuna","c) Battle of Kurukshetra","a) Krishna","b) Bhagavad Gita"]
+an=[2,3,1,3,1,3,4,3,1,2]
+r=[0,1,2,3,4,5,6,7,8,9]
+count=0
+y=[]
+point=0
+while(count<5):
+    p=random.choice(r)
+    if p not in y:
+        y.append(p)
+        print(q[p])
+        n=4*p
+        for d in range(1,5):
+            print(o[n])
+            n=n+1
+        ans=int(input("enter your choice in 1,2,3,4 format"))
+        if(ans==an[p]):
+            print("thats correct")
+            count=count+1
+            point=point+1
+        else:
+            print("wrong one buddy")
+            print(a[p],"is the right answer")
+            count=count+1
+    else:
+        pass
+if(point>3):
+    print("point=",point,"you nailed space and epic")
+elif(2<point<4):
+    print("point=",point,"thats an amazing score\n but there is always space to know more")
+else:
+    print("come-on man, know more na")
