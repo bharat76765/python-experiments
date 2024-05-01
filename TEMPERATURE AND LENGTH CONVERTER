@@ -1,0 +1,33 @@
+print("hello namaste\nYOUR NAME?")
+n=input()
+print("what would you wish to convert\n1) TEMPERATURE\n 2) LENGTH")
+z=int(input("enter the choice (1|2)?"))
+if (z==1):
+    print("lets start with temperature than\n\n (F)fahrenheit\n(C)celsius\n(K)kelvin")
+    in1=input()
+    if(in1=='F' or in1=='f'):
+        f=float(input("enter fahrenheit value"))
+        c=(f-32)*(5/9)
+        k=c+273.15
+        print("here are your converted values\n(F)fahrenheit=",f,"\n(C)celsius=",c,"\n(K)kelvin=",k)
+    elif(in1=='C' or in1=='c'):
+        c=float(input("enter celcius value"))
+        f=c(9/5)+32
+        k=c+273.15
+        print("here are your converted values\n(F)fahrenheit=",f,"\n(C)celsius=",c,"\n(K)kelvin=",k)
+    elif(in1=='K' or in1=='k'):
+        k=float(input("enter kelvin value"))
+        f=(k-273.15)*(9/5)+32
+        c=k-273.15
+        print("here are your converted values\n(F)fahrenheit=",f,"\n(C)celsius=",c,"\n(K)kelvin=",k)
+    else:
+        print("asked you to type k,c,f\n so oversmart rerun the program and provide proper input")
+        exit()
+if(z==2):
+    print("lets start with lenth factor than\n\n (CM)centimeter\n(IN)inches\n(foot)")
+    cm=float(input("enter the length factor in centimeter"))
+    foot=0.0328*cm
+    inch=0.3937*cm
+    mile=1/160934.4
+    print("\ncentimeter=",cm,"\nfoot=",foot,"mile=",mile,"inch=",inch)
+print("have a good day",n)
