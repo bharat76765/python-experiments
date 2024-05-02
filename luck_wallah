@@ -33,13 +33,13 @@ def luckwala():
     print("\nbest of luck dear",d,"\n\n")
 def guess_me():
     trial=0
-    a=int(input("enter the range in which u wish to play the game\nstart_no=?")
-b=int(input("\nend_number=?"))
+    a=int(input("enter the range in which u wish to play the game\nstart_no=?"))
+    b=int(input("\nend_number=?"))
     l=[]
     if a==b:
       print("are you kidding??,rerun the game to play again")
-          exit()
-      if a<b:
+      exit()
+    if a<b:
           for g in range(a,b+1):
               l.append(g)
           value=random.choice(l)
@@ -68,21 +68,21 @@ b=int(input("\nend_number=?"))
           elif 4<trial<10:
               print("that took a while",d,"you took",trial,"number of trials")
           else:
-              print("it was wayyyyy toooo longgggg for you",d,“
-               you took",trial,"number of trials")
-          print("best of luck",d,"\n\n")
-       else:
-              print("a=min_number,b=max_number")
-      print("so, which game you choose to play\n1) CHECK_LUCK_BY_DICE \n2) GUESS THE NUMBER\n3) EXIT")
-      h=int(input(f"enter your choice {d}"))
-      while h:   
-          match h:
-              case 1:
-                  luckwala()
-
-              case 2:
-                  guess_me()
-              case 3:
-                  exit()
-              case _ :
-                  print("please get out oversmart")
+              print("it was wayyyyy toooo longgggg for you",d,"you took",trial,"number of trials")
+              print("best of luck",d,"\n\n")
+    else:
+            print("a=min_number,b=max_number")
+print("so, which game you choose to play\n1) CHECK_LUCK_BY_DICE \n2) GUESS THE NUMBER\n3) EXIT")
+h=int(input(f"enter your choice {d}"))
+while h:
+  match h:
+    case 1:
+      luckwala()
+    case 2:
+      guess_me()
+    case 3:
+      exit()
+    case _ :
+      print("please get out oversmart")
+  print("so, which game you choose to play\n1) CHECK_LUCK_BY_DICE \n2) GUESS THE NUMBER\n3) EXIT")
+  h=int(input(f"enter your choice {d}"))
